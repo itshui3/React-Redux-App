@@ -10,6 +10,7 @@ export const attemptFetch = name => dispatch => {
   Axios.get(`https://api.genderize.io?name=${name}`)
     .then( res => {
       console.log(res)
+      dispatch({ type: SUCCESSFUL_FETCH, payload: res.data})
     })
     .catch( err => {
       console.log(err)

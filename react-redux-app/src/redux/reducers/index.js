@@ -8,7 +8,7 @@ const initialState = {
     count: null
   },
   isFetching: false,
-  error: false
+  error: null
 }
 
 export const reducer = (state = initialState, { type, payload }) => {
